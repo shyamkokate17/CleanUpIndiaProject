@@ -1,0 +1,283 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Task3</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+    <body style="background-color:aliceblue">
+
+        
+    @*<div id="bg">
+        <img src=" C:\Users\shyamk4\Downloads\backgd.webp" />
+    </div>*@
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Task3</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                     <a class="navbar-brand" href="#">
+                      <img src="~/img/png SwachChas.png" alt="logo"  style="width:90px;">
+                     </a>
+
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link text-dark dropdown-toggle" data-toggle="dropdown" href="#">User</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item"
+                                asp-area="Manage" asp-controller="Volunteers" asp-action="Index">Volunteers</a>
+                            <a class="dropdown-item"
+                            asp-area="Manage" asp-controller="Events" asp-action="Index"> Events</a>
+                            <a class="dropdown-item"
+                            asp-area="Manage" asp-controller="Responses" asp-action="Index">Comments</a>
+                         </div>
+                       </li>
+
+                    </ul>
+                </div>
+            </div>
+
+             <partial name="_LoginPartial" />
+
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Major Project - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+
+@*<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MajorProject</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body style="background-color:azure">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">MajorProject</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+
+                 <a class="navbar-brand" href="#">
+                      <img src="~/img/png SwachChas.png" alt="logo"  style="width:90px;">
+                     </a>
+
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                        <a class="nav-link text-dark dropdown-toggle" data-toggle="dropdown" href="#">User</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item"
+                                asp-area="Manage" asp-controller="Volunteers" asp-action="Index">Volunteers</a>
+                            <a class="dropdown-item"
+                            asp-area="Manage" asp-controller="Events" asp-action="Index"> Events</a>
+                            <a class="dropdown-item"
+                            asp-area="Manage" asp-controller="Responses" asp-action="Index">Comments</a>
+                          
+                            
+                            
+                            <a class="dropdown-item"
+                            asp-area="CleanUpIndia" asp-controller="OrderDetails" asp-action="Index">See Order</a>
+                        </div>
+
+                    </li>
+
+                             <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Useedd </a>
+                        <div class=" dropdown-menu">
+                            <a class="dropdown-item"
+                               asp-area="CleanUpIndia" asp-controller="Customers" asp-action="Index">Register Customer</a>
+                            <a class="dropdown-item"
+                               asp-area="CleanUpIndia" asp-controller="OrderDetails" asp-action="Create">Place Order</a>
+                        </div>
+                    </li>
+
+
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+             <partial name="_LoginPartial" />
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - MajorProject - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+       
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Clean Up India</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <script src="~/js/site.js"></script>
+
+   
+    
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    </script>
+</head>
+
+<body style="background-color:azure">
+
+    <header>
+        <!-- Navbar Start -->
+        <div class="container-fluid position-relative nav-bar p-0">
+            <div class="container position-relative" style="z-index: 12;">
+              <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-8">
+                    <a href="" class="navbar-brand">
+                        <h2 class="m-0 display-5 text-white"><span class="text-primary">CleanUp</span>INDIA</h2>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+                   
+
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+
+                    <a class="navbar-brand" href="#">
+                      <img src="~/img/png SwachChas.png" alt="logo"  style="width:90px;">
+                     </a>
+
+                  <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                       @* <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/About US">About US</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link text-dark dropdown-toggle" data-toggle="dropdown" href="#">User</a>
+                        <div class="dropdown-menu">
+
+                            <a class="dropdown-item"
+                                asp-area="Manage" asp-controller="Volunteers" asp-action="Index">Volunteers</a>
+                            <a class="dropdown-item"
+                            asp-area="Manage" asp-controller="Events" asp-action="Index"> Events</a>
+                            <a class="dropdown-item"
+                            asp-area="Manage" asp-controller="Responses" asp-action="Index">Comments</a>
+                            
+                        </div>
+
+                    </li>
+
+                  </ul>
+              
+                </div>
+
+                 <partial name="_LoginPartial" />
+
+              </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - MyINDIA - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+
+  @RenderSection("Scripts", required: false)
+</body>
+</html>*@
+
